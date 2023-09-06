@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.loading{
+    width: 500px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transform: perspective(3000px) rotateX(65deg);
+}
+
+.loading span{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid rgb(10, 226, 245);
+    animation: ani 5s ease-in-out infinite;
+}
+
+@keyframes ani{
+    0%{
+        transform: translateZ(-50px);
+    }
+    50%{
+        transform: translateZ(200px);
+    }
+    100%{
+        transform: translateZ(-50px);
+    }
+}

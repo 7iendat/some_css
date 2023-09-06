@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    <div class="loading">
+        <span></span>
+    </div>
+
+    <script>
+        const loading = document.querySelector('.loading')
+        for (var i = 0 ; i<20; i++){
+            let span = document.createElement('span')
+            loading.appendChild(span)
+        }
+        const listCirles = document.querySelectorAll('.loading span')
+        var postion = 0;
+        var delay = 3;
+        listCirles.forEach(cirle=> {
+            cirle.style.top = postion +'px'
+            cirle.style.bottom = postion +'px'
+            cirle.style.right = postion +'px'
+            cirle.style.left = postion +'px'
+            postion += 12;
+            delay -= 0.1;
+            cirle.style.animationDelay = delay + 's'
+        })
+    </script>
+
+</body>
+</html>

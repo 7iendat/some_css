@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    position: relative;
+    font-size: 200px;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 5px aqua
+}
+span:before{
+    content: "FUCKYOU^^";
+    color: #fff;
+    position: absolute;
+    width: 30;
+    border-right: 5px solid aqua ;
+    overflow: hidden;
+    transition: 1s;
+    text-shadow: 0px 0px 10px aqua, 0px 0px 20px aqua,0px 0px 30px aqua ;
+    animation: ani 6s infinite linear;
+}
+@keyframes ani {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
